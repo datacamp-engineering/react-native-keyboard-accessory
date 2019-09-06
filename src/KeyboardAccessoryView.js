@@ -173,7 +173,7 @@ class KeyboardAccessoryView extends Component {
           ]}
           pointerEvents="box-none"
         >
-          <View onLayout={this.handleChildrenLayout} pointerEvents="boxNone">
+          <View onLayout={this.handleChildrenLayout} pointerEvents="box-none">
             { this.props.children }
           </View>
         </View>

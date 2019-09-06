@@ -1,6 +1,6 @@
 {
   "name": "@datacamp/react-native-keyboard-accessory",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description":"A React Native Keyboard Accessory (View, Navigation) Component. Sticky views on keyboard.",
   "author": {
     "name": "Arda Oğulcan Pektaş",
