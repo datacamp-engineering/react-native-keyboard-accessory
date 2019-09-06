@@ -157,18 +157,23 @@ class KeyboardAccessoryView extends Component {
     const applySafeArea = isSafeAreaSupported && inSafeAreaView;
 
     return (
-      <View style={{ height: (isKeyboardVisible || alwaysVisible ? visibleHeight  : 0) }}>
-        <View style={[
-          styles.accessory,
-          !hideBorder && styles.accessoryBorder,
-          style,
-          {
-            opacity: (isKeyboardVisible || alwaysVisible ? visibleOpacity : hiddenOpacity),
-            bottom: keyboardHeight - bumperHeight - (applySafeArea ? 20 : 0),
-            height: accessoryHeight + bumperHeight + (applySafeArea ? (!isKeyboardVisible ? 20 : -10) : 0),
-          }
-        ]}>
-          <View onLayout={this.handleChildrenLayout}>
+      <View
+        style={{ height: (isKeyboardVisible || alwaysVisible ? visibleHeight  : 0) }}
+        pointerEvents="box-none">
+        <View
+          style={[
+            styles.accessory,
+            !hideBorder && styles.accessoryBorder,
+            style,
+            {
+              opacity: (isKeyboardVisible || alwaysVisible ? visibleOpacity : hiddenOpacity),
+              bottom: keyboardHeight - bumperHeight - (applySafeArea ? 20 : 0),
+              height: accessoryHeight + bumperHeight + (applySafeArea ? (!isKeyboardVisible ? 20 : -10) : 0),
+            }
+          ]}
+          pointerEvents="box-none"
+        >
+          <View onLayout={this.handleChildrenLayout} pointerEvents="boxNone">
             { this.props.children }
           </View>
         </View>
