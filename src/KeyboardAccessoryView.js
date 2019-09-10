@@ -184,6 +184,7 @@ class KeyboardAccessoryView extends Component {
         style={{
           height: isKeyboardVisible || alwaysVisible ? visibleHeight : 0
         }}
+        pointerEvents="box-none"
       >
         <View
           style={[
@@ -202,8 +203,9 @@ class KeyboardAccessoryView extends Component {
                 (applySafeArea ? (!isKeyboardVisible ? 20 : -10) : 0)
             }
           ]}
+          pointerEvents="box-none"
         >
-          <View onLayout={this.handleChildrenLayout}>
+          <View onLayout={this.handleChildrenLayout} pointerEvents="box-none">
             {isChildRenderProp
               ? this.props.children({ isKeyboardVisible })
               : this.props.children}
