@@ -134,6 +134,10 @@ class KeyboardAccessoryView extends Component {
       keyboardHeight: keyboardHeight,
       accessoryHeight: this.state.visibleAccessoryHeight
     });
+
+    if (this.props.onKeyboardShow) {
+      this.props.onKeyboardShow();
+    }
   };
 
   handleKeyboardHide = keyboardEvent => {
@@ -157,6 +161,10 @@ class KeyboardAccessoryView extends Component {
         ? this.state.visibleAccessoryHeight
         : 0
     });
+
+    if (this.props.onKeyboardHide) {
+      this.props.onKeyboardHide();
+    }
   };
 
   render() {
@@ -228,7 +236,9 @@ KeyboardAccessoryView.propTypes = {
   alwaysVisible: PropTypes.bool,
   hideBorder: PropTypes.bool,
   inSafeAreaView: PropTypes.bool,
-  avoidKeyboard: PropTypes.bool
+  avoidKeyboard: PropTypes.bool,
+  onKeyboardShow: PropTypes.func,
+  onKeyboardHide: PropTypes.func
 };
 
 KeyboardAccessoryView.defaultProps = {
