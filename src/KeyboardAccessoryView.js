@@ -225,7 +225,7 @@ class KeyboardAccessoryView extends Component {
 }
 
 KeyboardAccessoryView.propTypes = {
-  style: (View.propTypes || ViewPropTypes).style,
+  style: PropTypes.object,
   animateOn: PropTypes.oneOf(["ios", "android", "all", "none"]),
   animationConfig: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   bumperHeight: PropTypes.number,
