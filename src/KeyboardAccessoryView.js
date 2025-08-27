@@ -176,7 +176,7 @@ class KeyboardAccessoryView extends Component {
       visibleOpacity,
       hiddenOpacity,
       hideBorder,
-      heightProperty
+      heightProperty,
       style,
       inSafeAreaView,
       safeAreaBumper,
